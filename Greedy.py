@@ -165,6 +165,7 @@ def fringe_Check():
 def searching_iterative():
     global fringe, visited
     # loop for checking fringe until find the goal
+    start_time = time.time()
     while True:
 
         for x in fringe:
@@ -183,10 +184,12 @@ def searching_iterative():
 
         drawing_Game()
         clock.tick(1)
-
+        print("time elapsed: {:.2f}s".format(time.time() - start_time))
 # Importing the library
 import pygame
 import sys
+import time
+
 # init timer
 clock = pygame.time.Clock()
 n=8
@@ -286,3 +289,7 @@ while True:
 
     # call function to draw
     drawing_Game()
+
+
+    # my code here
+
